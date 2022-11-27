@@ -62,10 +62,6 @@ if mode == "whole dataset":
         list_hauteur = df["L Local en (m)"].apply(lambda x: x.replace(",", ".")).astype(float).tolist()
         list_coef_K = df["Coef K de Local"].apply(lambda x: x.replace(",", ".")).astype(float).tolist()
 
-        print(list_surface)
-        print(list_hauteur)
-        print(list_coef_K)
-
         list_um_detectors = []
 
         for surface, hauteur, coef_K in zip(list_surface, list_hauteur, list_coef_K):
